@@ -7,6 +7,6 @@ services:
       - "80:8080"
     stdin_open: true # docker run -i
     tty: true        # docker run -t
-    command: ["runuser", "-u", "myuser", "--", "python", "-m", "flask", "--debug", "run", "--host=0.0.0.0"]
+    command: ["./development.sh"]
     volumes:
       - .:/home/myuser

@@ -13,6 +13,6 @@ ENV QR_CODE_DEFAULT_FILE_NAME='default.png'
 WORKDIR /home/myuser
 COPY --chown=myuser:myuser . .
 RUN pip3 install -r requirements.txt
-RUN flask db upgrade
-CMD gunicorn -w 4 --bind 0.0.0.0:$PORT "application:init_app()"
+CMD ["./production.sh"]
+
 # CMD ["runuser", "-u", "myuser", "--", "python", "-m", "flask", "run", "--host=0.0.0.0"]
