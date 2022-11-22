@@ -7,10 +7,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>My Site - {% block title %}{% endblock %}</title>
     {% endblock %}
+
+<style>
+    menu li {
+        display: inline;
+    }
+
+</style>
+
+
 </head>
+
+
+
 <body>
 <header>
-    Menu Goes Here
+    <menu>
+        <li><a href="{{ url_for('homepage.homepage') }}">Home</a></li>
+        <li><a href="{{ url_for('homepage.about') }}">About</a></li>
+        <li><a href="{{ url_for('homepage.users') }}">Users</a></li>
+    </menu>
 </header>
 <!-- Renders Form Flash Messages -->
 
