@@ -1,3 +1,6 @@
+"""
+Main Flask Application Initialization
+"""
 from flask import Flask
 from flask_migrate import Migrate
 from application.database import db
@@ -18,11 +21,7 @@ def init_app():
     migrate.init_app(app, db)
 
     with app.app_context():
-        # Include our Routes
 
         # Register Blueprints
         app.register_blueprint(homepage.bp_homepage)
         return app
-
-
-

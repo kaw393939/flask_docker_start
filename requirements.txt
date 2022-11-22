@@ -4,3 +4,5 @@ flask-migrate
 pytest~=7.2.0
 alembic~=1.8.1
 SQLAlchemy~=1.4.44
+Faker
+gunicorn
