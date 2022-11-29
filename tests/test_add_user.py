@@ -15,7 +15,7 @@ def test_add_users(app):
             user.password = faker.password()
             user.email = faker.email()
             user.phone = faker.phone_number()
-
+            user.address = faker.address()
             user_list.append(user)
 
         db.session.add_all(user_list)

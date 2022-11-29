@@ -27,7 +27,7 @@ def user_by_email(email):
     return render_template('user.html', user=user)
 
 
-@bp_homepage.route('/my_users/<user_id>')
+@bp_homepage.route('/users/<user_id>')
 def user_by_id(user_id):
     user = User.find_user_by_id(user_id)
     return render_template('user.html', user=user)
