@@ -1,11 +1,19 @@
-# 
+# Flask, SQLAlchemy, Alembic, and Docker
+In this assignment you need to make the website pass the teacher tests.
+
+# Overview Video
+1. https://youtu.be/jUDGkE68Dg0
+
+
+## Teacher Test Requirements
+1. You need to make a users' page that shows the count of user records and prints the users bellow.
+2. You need to make an about page
 
 # Install Commands
 1. pip(3) install -r requirements.txt
-2. flask run
-3. flask --debug run
+2. flask db upgrade
+3. flask --debug run  or flask run (no debugging)
 4. pytest
-5. flask db upgrade
 
 ## Fix Mac Permission Error after docker compose up --build  command - Run these on the terminal 
 * chmod +x ./development.sh

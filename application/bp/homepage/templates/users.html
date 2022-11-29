@@ -4,11 +4,13 @@
 {% block content %}
 
     <h2>Users</h2>
+    <h3>User Count = {{ users|length }}</h3>
     {% if users|length == 0 -%}
         No Records Found
     {% else -%}
         {% for user in users %}
-            {{ user.name }} - {{ user.email }} - {{ user.password }}
+            <hr>
+            <a href="/users/{{ user.id}}">View</a> {{ user.name }} - {{ user.email }} - {{ user.password }}
         {% endfor %}
     {% endif %}
 
