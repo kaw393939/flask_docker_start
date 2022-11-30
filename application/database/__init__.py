@@ -13,7 +13,6 @@ class User(db.Model):
     password = db.Column(db.String(128))
     email = db.Column(db.String(128))
     phone = db.Column(db.String(128))
-    address = db.Column(db.String(128))
 
     @classmethod
     def all(cls):
@@ -26,3 +25,7 @@ class User(db.Model):
     @classmethod
     def find_user_by_id(cls, user_id):
         return cls.query.filter(cls.id == user_id).first()
+
+    @classmethod
+    def record_count(cls):
+        return cls.query.count()

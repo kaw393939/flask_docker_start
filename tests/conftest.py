@@ -8,7 +8,7 @@ from application.database import db, User
 @pytest.fixture(scope="function")
 def create_300_users(app):
     faker = Faker('en')
-    Faker.seed(4321)
+    # Faker.seed()
     user_list = []
     number_of_users = 300
 
