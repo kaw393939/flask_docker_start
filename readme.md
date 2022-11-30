@@ -29,7 +29,7 @@ You will need to make the following changes to make this work:
 # Overview Video
 
 1. [Part 1 - Overview](https://youtu.be/jUDGkE68Dg0)
-2. [Part  2 - Assignment Completion  with Fixtures]()
+2. [Part  2 - Assignment Completion  with Fixtures](https://youtu.be/lK0_tz-h-oc)
 
 # Install Commands
 
