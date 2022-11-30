@@ -1,8 +1,29 @@
 import pytest
+from faker import Faker
 
 from application import init_app as create_app
-from application.database import db
+from application.database import db, User
 
+
+@pytest.fixture(scope="function")
+def create_300_users(app):
+    faker = Faker('en')
+    Faker.seed(4321)
+    user_list = []
+    number_of_users = 300
+
+    with app.app_context():
+        for i in range(number_of_users):
+            user = User()
+            user.name = faker.name()
+            user.password = faker.password()
+            user.email = faker.email()
+            user.phone = faker.phone_number()
+            user.address = faker.address()
+            user_list.append(user)
+
+        db.session.add_all(user_list)
+        db.session.commit()
 
 @pytest.fixture(scope="function")
 def app():
